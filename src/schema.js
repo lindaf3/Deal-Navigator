@@ -106,7 +106,7 @@ const typeDefs = gql`
     getGames(title: String!, steamAppID: Int, limit: Int, exact: Bool): [GameType],
     getSpecificGame(id: Int!): SpecificGameType,
     getMultipleGames(ids: String!): JSON,
-    getStores: StoreType
+    getStores: [StoreType]
   }
 `
 module.exports = typeDefs;
