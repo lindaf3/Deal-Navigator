@@ -1,10 +1,18 @@
 {
-  "name": "DealNavigator",
+  "name": "deal-navigator",
   "version": "1.0.0",
   "description": "A simple Apollo GraphQL CheapShark API Client for finding cheap video game deals. \\\r Built with Node.js, Apollo GraphQL, and the [CheapShark API](https://apidocs.cheapshark.com/?version=latest#c33f57dd-3bb3-3b1f-c454-08cab413a115). \r # How It Works\r # Usage",
   "main": "index.js",
+  "dependencies": {
+    "apollo-datasource-rest": "^3.2.0",
+    "apollo-server": "^3.2.0",
+    "apollo-server-express": "^3.0.0-rc.1",
+    "graphql": "^15.5.1",
+    "graphql-type-json": "^0.3.2"
+  },
+  "devDependencies": {},
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "node src/index.js"
   },
   "repository": {
     "type": "git",
@@ -16,9 +24,5 @@
   "bugs": {
     "url": "https://github.com/lindaf3/DealNavigator/issues"
   },
-  "homepage": "https://github.com/lindaf3/DealNavigator#readme",
-  "dependencies": {
-    "apollo-server": "^3.1.2",
-    "graphql": "^15.5.1"
-  }
+  "homepage": "https://github.com/lindaf3/DealNavigator#readme"
 }
