@@ -5,14 +5,13 @@ class CheapSharkAPI extends RESTDataSource {
     super();
     this.baseURL = 'https://www.cheapshark.com/api/1.0/';
   }
-  async buildQueryParameters(parameters){
+   buildQueryParameters(parameters){
     const ans = {};
     for(let i = 0; i < parameters.length; ++i){
       if(parameters[i][1]){
         ans[parameters[i][0]] = parameters[i][1];
       }
     }
-    console.log(ans);
     return ans;
   }
   async lookupDeals( storeID, pageNumber, pageSize, sortBy, desc, lowerPrice, upperPrice, metacritic, steamRating, steamAppID, 
@@ -29,7 +28,7 @@ class CheapSharkAPI extends RESTDataSource {
       const parameters = [ [ "title", title ], ["steamAppID", steamAppID], [ "limit", limit ], [ "exact", exact ] ];
       return await this.get( 'games', this.buildQueryParameters(parameters) );
   }
-  async lookupGame( id ) {
+  async lookupGame( id ) {;
       return await this.get( 'games', { id: id } );
   }
   async lookupMultipleGames( ids ) {
