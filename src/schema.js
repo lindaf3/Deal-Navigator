@@ -100,7 +100,7 @@ const typeDefs = gql`
 
   type Query {
     getDealLink(id: String!): String
-    getDeals(storeId: String pageNumber: Int pageSize: Int sortBy: String desc: Boolean lowerPrice: Int upperPrice: Int metacritic: Int 
+    getDeals(storeID: String pageNumber: Int pageSize: Int sortBy: String desc: Boolean lowerPrice: Int upperPrice: Int metacritic: Int 
       steamRating: Int steamAppID: String title: String exact: Boolean AAA: Boolean steamworks: Boolean onSale: Boolean output: String): [DealType]
     getSpecificDeal(id: String!): SpecificDealType
     getGames(title: String! steamAppID: Int limit: Int exact: Boolean): [GameType]
