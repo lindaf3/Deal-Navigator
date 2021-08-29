@@ -5,7 +5,7 @@ class CheapSharkAPI extends RESTDataSource {
     super();
     this.baseURL = 'https://www.cheapshark.com/api/1.0/';
   }
-   buildQueryParameters(parameters){
+  buildQueryParameters(parameters){
     const ans = {};
     for(let i = 0; i < parameters.length; ++i){
       if(parameters[i][1]){
